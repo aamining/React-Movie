@@ -21,7 +21,7 @@ class Header extends Component {
 
 export default Header;
 
-// this mens class name; Header
+// this means class name; Header
 // Props reffer to object properties.
 
 // What is state in a React app? You can think of it as a single JavaScript object which represents all the data in your app.

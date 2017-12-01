@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
 class Movie extends Component {
+
+
   render() {
     return (
       <div className="movie">
-        <h2>{ this.props.title }</h2>
-      <div><img width="200" src={ this.props.poster } /></div>
-        <p>({ this.props.year })</p>
-        <p>{ this.props.description }</p>
+        <h2>{ this.props.meta.title }</h2>
+        <div><img width="200" src={ this.props.meta.poster } /></div>
+        <p>({ this.props.meta.year })</p>
+        <p>{ this.props.meta.description }</p>
       </div>
     );
   }
@@ -15,7 +17,7 @@ class Movie extends Component {
 
 export default Movie;
 
-// this mens class name; movie
+// this means class name; movie
 // Props reffer to object .
 
 // What is state in a React app? You can think of it as a single JavaScript object which represents all the data in your app.
