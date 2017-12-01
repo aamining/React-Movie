@@ -18,7 +18,7 @@ class App extends Component {
     this.state = {
       movies: initialMovies
     };
-
+    this.loadAdditionalMovies = this.loadAdditionalMovies.bind(this);
   }
 
   render() {
@@ -34,10 +34,17 @@ class App extends Component {
             .map(key => <Movie key={key} meta={this.state.movies[key]} />)
           }
         </div>
+        <div className="add-movies"><button onClick={this.loadAdditionalMovies}>Load more...</button></div>
+
 
       </div>
 
     );
+  }
+  loadAdditionalMovies() {
+    var currentMovies = { ...this.state.movies };
+    var newMovies = Object.assign( currentMovies, additionalMovies );
+    this.setState({ movies: newMovies });
   }
 }
 
