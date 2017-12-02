@@ -18,6 +18,7 @@ class App extends Component {
 
     this.state = {
       movies: initialMovies
+      // DO NOT USE CURL BRUCKETS FOR THIS
     };
     this.loadAdditionalMovies = this.loadAdditionalMovies.bind(this);
     this.addMovieToGallery = this.addMovieToGallery.bind( this );
